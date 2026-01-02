@@ -1,5 +1,5 @@
 # FURM-Host-Parasitoid-Dynamics
-This repository contains all appropriate MATLAB program files associated to the FURM book chapter entitled "The mathematics of host-parasitoid population dynamics."
+This repository contains all appropriate MATLAB and Python program files associated to the FURM book chapter entitled "The mathematics of host-parasitoid population dynamics."
 
 There are four folders contained in the repository.  Each folder corresponds to a section number from the book chapter.  
 
