@@ -29,7 +29,6 @@ x0 = 5
 y0 = 1
 
 # Vector initialization: 
-# (Allocate N+1 entries to store x_0,...,x_N and y_0,...,y_N.)
 x = np.zeros(N + 1)
 y = np.zeros(N + 1)
 x[0] = x0

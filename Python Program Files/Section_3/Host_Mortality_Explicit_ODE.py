@@ -29,9 +29,7 @@ for i in range(len(cd_vec)):
     P0 = 8  # (scalar P; avoid name clash with function below)
     
     # Solutions to basic parasitism with constant rate and host mortality:
-    # L(tau) = R*H / ( exp(c*P*tau) + cd*R*H*(exp(c*P*tau)-1)/(c*P) )
     L = lambda t: (R*H) / (np.exp(c*P0*t) + cd*R*H*(np.exp(c*P0*t) - 1) / (c*P0))
-    # I(tau) = (c*P/cd) * log( 1 + cd*R*H*(1 - exp(-c*P*tau)) / (c*P) )
     I = lambda t: (c*P0/cd) * np.log(1 + cd*R*H*(1 - np.exp(-c*P0*t)) / (c*P0))
     P = lambda t: P0 * np.ones_like(t)
 

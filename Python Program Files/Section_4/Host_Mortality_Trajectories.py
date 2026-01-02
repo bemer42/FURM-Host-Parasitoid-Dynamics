@@ -29,9 +29,7 @@ for i in range(3):
     N = 50
     
     # Escape responses:
-    # f(H,P) = exp(-c P T) / ( 1 + cd R H (-exp(-c P T) + 1) / (c P) )
     f = lambda H, P: np.exp(-c * P * T) / (1 + cd * R * H * (-np.exp(-c * P * T) + 1) / (c * P))
-    # g(H,P) = (P / z) * log( 1 + cd R H (1 - exp(-c P T)) / (c P) )
     g = lambda H, P: (P / z) * np.log(1 + cd * R * H * (1 - np.exp(-c * P * T)) / (c * P))
     
     # Initial populations:

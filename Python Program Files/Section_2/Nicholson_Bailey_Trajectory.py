@@ -24,7 +24,6 @@ H0 = 5
 P0 = 8
 
 # Vector initialization: 
-# (store t = 0..N inclusive)
 H = np.zeros(N + 1)
 P = np.zeros(N + 1)
 H[0] = H0

@@ -46,10 +46,6 @@ for t in range(N):
     Y_0 = [L_0, I_0, P0_0, P1_0]
 
     # Define the right-hand side of the ODEs and a vector function:
-    # dL/dtau  = -c*L*P1
-    # dI/dtau  =  c*L*P1
-    # dP0/dtau =  c*L*P1 - cr*P0
-    # dP1/dtau = -c*L*P1 + cr*P0
     def dYdtau(tau_, Y):
         L, I, P0, P1 = Y
         dLdtau  = -c * L * P1
@@ -93,7 +89,6 @@ plt.gca().tick_params(labelsize=18)
 plt.title('Phase Plane Plot', fontsize=25)
 plt.xlabel(r'$H_t$', fontsize=22)
 plt.ylabel(r'$P_t$', fontsize=22)
-# Keeping legend text consistent with the MATLAB script:
 plt.legend([r'$(H_t,P_t)$', r'$(H_0,H_0)$'], loc='upper right', fontsize=22)
 plt.grid(True, which='both')
 plt.minorticks_on()

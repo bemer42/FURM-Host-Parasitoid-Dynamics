@@ -20,7 +20,6 @@ for i in range(len(R_vec)):
     R = R_vec[i]
 
     # Define equation to be solved:
-    # f(a) = (1 - a*R)*R/(R-1) * log( ((1-a)*R) / (1 - a*R) ) - 1
     def f(a):
         return (1 - a*R) * R / (R - 1) * np.log(((1 - a) * R) / (1 - a * R)) - 1.0
 
@@ -28,8 +27,6 @@ for i in range(len(R_vec)):
     a_guess = 0.9 / R
 
     # Solve for alpha^*
-    # options = optimset('MaxFunEvals',1e6,'MaxIter',1e4,'TolFun',1e-6);
-    # In Python fsolve, we set xtol and maxfev similarly.
     sol = fsolve(f, a_guess, xtol=1e-6, maxfev=int(1e6))
     a_star[i] = sol[0]
 

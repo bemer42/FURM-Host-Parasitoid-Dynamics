@@ -20,7 +20,6 @@ for i in range(len(R_vec)):
     R = R_vec[i]
 
     # Define equation to be solved: 
-    # f(z) = R*(log(R) - z)/(R - exp(z)) - z - 1
     def f(z):
         return R * (np.log(R) - z) / (R - np.exp(z)) - z - 1.0
 

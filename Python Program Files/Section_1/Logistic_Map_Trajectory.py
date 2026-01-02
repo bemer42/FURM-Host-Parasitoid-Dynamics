@@ -31,8 +31,7 @@ for i in range(len(x0_vec)):
     # Initial populations:
     x0 = x0_vec[i]
 
-    # Vector initialization and tracjectory for loop:
-    # (Allocate N+1 entries to include x_0 through x_N)
+    # Vector initialization and trajectory for loop:
     x = np.zeros(N + 1)
     x[0] = x0
 
@@ -56,8 +55,6 @@ for i in range(len(x0_vec)):
                fontsize=22)
 
     plt.ylim([0, 1])
-
-    # hold on (MATLAB) — Matplotlib adds to the current axes by default.
 
 # Apply grid lines to the figure:
 plt.grid(True, which='both')

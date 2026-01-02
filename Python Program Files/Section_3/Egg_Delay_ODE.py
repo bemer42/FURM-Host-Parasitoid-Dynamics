@@ -39,7 +39,7 @@ def dYdtau(tau, Y):
     dP1dtau = -c * L * P1 + cr * P0
     return [dLdtau, dIdtau, dP0dtau, dP1dtau]
 
-# Solve the ODE system using solve_ivp (analogous to ode45):
+# Solve the ODE system using solve_ivp:
 sol = solve_ivp(dYdtau, [0, T], Y_0, t_eval=tau, method='RK45', rtol=1e-6, atol=1e-9)
 
 # Extract solutions:
